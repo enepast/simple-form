@@ -1,10 +1,10 @@
 .user {
   background-color: white;
   border-radius: 10px; /* Bordes redondeados del formulario */
+  margin: 0 auto; /* Centrar el formulario en la página */
+  max-width: 50rem;
   padding: 20px; /* Espaciado interno del formulario */
   width: 80%; /* Ancho del formulario (ajusta según tus necesidades) */
-  max-width: 50rem;
-  margin: 0 auto; /* Centrar el formulario en la página */
 }
 
 input {
@@ -33,3 +33,15 @@ label {
   margin-top: 10px; /* Espaciado entre inputs y labels */
   margin-bottom: 10px; /* Espaciado entre inputs y labels */
 }
+
+
+/*
+.error {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;  
+  font-weight: bold;
+  width: 80%; 
+  max-width: 50rem;
+}*/
