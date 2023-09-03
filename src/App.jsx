@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import { NewUserForm } from "./components/form/NewUserForm";
+import { ResultList } from "./components/result/ResultList";
+
+const DUMMY_VALUES = [
+  {
+    id: 1,
+    username: "Dario",
+    age: 30,
+  },
+  {
+    id: 2,
+    username: "Opticenter",
+    age: 25,
+  },
+  {
+    id: 3,
+    username: "Mauricio",
+    age: 28,
+  },
+  {
+    id: 4,
+    username: "Patricio",
+    age: 28,
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [values, setValues] = useState(DUMMY_VALUES);
+
+  const addValueHandler = (newValue) => {
+    setValues((prevValues) => [...prevValues, newValue]);
+    console.log(values);
+  };
+  const deleteValueHandler = (id) => {
+    console.log("eliminame este id: " + id);
+    setValues(values.filter((value) => value.id != id));
+  };
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <NewUserForm onAdd={addValueHandler} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+        <ResultList values={values} onDelete={deleteValueHandler} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
