@@ -1,0 +1,35 @@
+.user {
+  background-color: white;
+  border-radius: 10px; /* Bordes redondeados del formulario */
+  padding: 20px; /* Espaciado interno del formulario */
+  width: 80%; /* Ancho del formulario (ajusta según tus necesidades) */
+  max-width: 50rem;
+  margin: 0 auto; /* Centrar el formulario en la página */
+}
+
+input {
+  background-color: white;
+  color: black;
+  border: 0.1rem solid #ccc; /* Bordes del input */
+  padding: 10px; /* Espaciado interno del input */
+  display: block; /* Mostrar los inputs en columna */
+  margin-bottom: 1rem; /* Espaciado entre los inputs */
+  width: 97%; /* Ancho completo */
+}
+
+button {
+  font-size: 1rem;
+  background-color: rgb(59, 2, 59); /* Fondo morado para el botón */
+  color: white; /* Texto blanco en el botón */
+  border: none; /* Elimina los bordes del botón */
+  padding: 5px 10px; /* Espaciado interno del botón */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón por encima del botón */
+}
+
+label {
+  font-weight: bold;
+  font-size: 1rem;
+  display: block; /* Mostrar inputs y labels en columna */
+  margin-top: 10px; /* Espaciado entre inputs y labels */
+  margin-bottom: 10px; /* Espaciado entre inputs y labels */
+}

@@ -1,5 +1,9 @@
 .result {
-    background-color: white;
-    color: black;
-    width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto; /* Centrar el formulario en la página */
+  font-weight: bold;
+  width: 80%; /* Ancho del formulario (ajusta según tus necesidades) */
+  max-width: 50rem;
 }

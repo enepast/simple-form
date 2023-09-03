@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./NewUserForm.module.css";
 
 export const NewUserForm = (props) => {
   const [username, setUsername] = useState("");
@@ -22,11 +23,16 @@ export const NewUserForm = (props) => {
     props.onAdd(newValue);
   };
   return (
-    <form onSubmit={submitHandler}>
-      <label>Username</label>
-      <input onChange={usernameHandler} value={username}></input>
-      <label>Age (Years)</label>
-      <input onChange={ageHandler} type="number" value={age}></input>
+    <form onSubmit={submitHandler} className={styles.user}>
+      <label htmlFor="username">Username</label>
+      <input onChange={usernameHandler} value={username} id="username" type="text"></input>
+      <label htmlFor="username">Age (Years)</label>
+      <input
+        onChange={ageHandler}
+        type="number"
+        value={age}
+        id="username"
+      ></input>
       <button type="submit">Add User</button>
     </form>
   );
