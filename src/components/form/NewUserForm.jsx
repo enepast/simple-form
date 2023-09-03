@@ -18,11 +18,11 @@ export const NewUserForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    if (username === "" && age <= 0) {
+    if (username.trim().length === 0 && age <= 0) {
       overlayHandler("Please enter a valid name and age (non-empty values).");
       return;
     }
-    if (username === "") {
+    if (username.trim().length === 0) {
       overlayHandler("Please enter a valid username (field can't be empty).");
       return;
     }
