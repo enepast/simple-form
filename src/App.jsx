@@ -30,7 +30,7 @@ function App() {
   const [values, setValues] = useState(DUMMY_VALUES);
 
   const addValueHandler = (newValue) => {
-    setValues((prevValues) => [...prevValues, newValue]);
+    setValues((prevValues) => [newValue, ...prevValues]);
     console.log(values);
   };
   const deleteValueHandler = (id) => {
